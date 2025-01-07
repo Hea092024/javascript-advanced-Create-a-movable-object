@@ -4,11 +4,16 @@
     box-sizing: border-box;
 }
 
-
+body {
+   background-image: url(./assets/beach.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
 
 #move {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 200px;
