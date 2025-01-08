@@ -12,7 +12,10 @@ body {
    overflow: hidden;
 }
 
-
+#title {
+    font-size: 2.5rem;
+    color: #fff;
+}
 
 
 #move {
