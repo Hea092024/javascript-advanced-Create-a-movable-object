@@ -15,6 +15,6 @@ const keyActions = {
 
 addEventListener("keydown", (evt) => {
   evt.preventDefault();
-  if (!evt.repeat) //does not move when key is held, removing this will make it move when key is held
+  // if (!evt.repeat) //does not move when key is held, removing this will make it move when key is held
      keyActions[evt.key]?.();
 });
