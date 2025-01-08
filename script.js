@@ -24,6 +24,7 @@ addEventListener("click", (evt) => {
   // Get click coordinates 
   pos.x = evt.clientX;
   pos.y = evt.clientY;
-  
+  pos.x -= capybara.offsetWidth / 2;
+  pos.y -= capybara.offsetHeight / 2;
   move();
 });
