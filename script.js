@@ -28,3 +28,9 @@ addEventListener("click", (evt) => {
   pos.y -= capybara.offsetHeight / 2;
   move();
 });
+
+let welcome = document.getElementById("title");
+
+let greeting = "Welcome to Capybara Land";
+
+welcome.textContent = greeting;
