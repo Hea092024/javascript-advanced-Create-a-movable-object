@@ -5,13 +5,13 @@ const pos = { x: 0, y: 0 };
 
 const move = (evt) => (capybara.style.translate = `${pos.x}px ${pos.y}px`);
 //map of arrow keys
-const keyActions = {
-  ArrowUp: () => move((pos.y -= 40)),
-  ArrowDown: () => move((pos.y += 40)),
-  ArrowLeft: () => move((pos.x -= 40)),
-  ArrowRight: () => move((pos.x += 40)),
-};
+const keyActions = { ArrowUp: () => { pos.y -= 40; constrainPosition(); }, ArrowDown: () => { pos.y += 40; constrainPosition(); }, ArrowLeft: () => { pos.x -= 40; constrainPosition(); }, ArrowRight: () => { pos.x += 40; constrainPosition(); }, }; addEventListener("keydown", (evt) => { evt.preventDefault(); if (keyActions[evt.key]) { keyActions[evt.key](); } });
 
+const constrainPosition = () => {
+  pos.x = Math.min(Math.max(pos.x, 0), vw - capybara.offsetWidth);
+  pos.y = Math.min(Math.max(pos.y, 0), vh - capybara.offsetHeight);
+  move();
+};
 
 addEventListener("keydown", (evt) => {
   evt.preventDefault();
