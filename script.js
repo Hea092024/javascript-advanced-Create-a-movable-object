@@ -56,7 +56,7 @@ const constrainPosition = () => {
   const capybaraHeight = capybara.offsetHeight;
 
   pos.x = Math.min(Math.max(pos.x, 0), vw - capybaraWidth);
-  pos.y = Math.min(Math.max(pos.y, 0), vh - capybaraHeight - 45);
+  pos.y = Math.min(Math.max(pos.y, 0), vh - capybaraHeight - 5);
   move();
 };
 
