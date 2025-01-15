@@ -35,7 +35,7 @@ addEventListener("click", (evt) => {
   pos.y = evt.clientY;
   pos.x -= capybara.offsetWidth / 2;
   pos.y -= capybara.offsetHeight / 2;
-  move();
+  constrainPosition();
 });
 
 let welcome = document.getElementById("title");
